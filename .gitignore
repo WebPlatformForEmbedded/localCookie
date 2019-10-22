@@ -1,0 +1,5 @@
+node_modules
+.DS_Store
+local
+test/storage.js
+test/storage.js.map
