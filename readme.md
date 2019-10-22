@@ -1,12 +1,12 @@
 # localCookies
 
-A tiny localStorage with fallback to Cookies shim. Will allow apps to use localStorage but fallsback to cookies when that is not available in the browser.
+A tiny localStorage shim with fallback to Cookies. Will allow apps to use localStorage but fallsback to cookies when that is not available in the browser.
 
 ## About localCookies
 
 The localCookies library has the exact same API as localStorage, for more information see [here](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage).
 
-localCookies comes in two flavors a iife function that can be directly used in the <script> tag under `./dist` and a ES6 module under `./modul`
+localCookies comes in two flavors a iife function that can be directly used in the <script> tag under `./dist` and a ES6 module under `./module`
 
 ## Getting started
 
