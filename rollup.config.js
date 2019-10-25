@@ -7,18 +7,18 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 
 export default [
   {
-    input: './src/storage.js',
+    input: './src/localCookie.js',
     output: {
-      file: './dist/storage.js',
+      file: './dist/localCookie.js',
       format: 'iife',
       name: 'Storage',
     },
     plugins: [resolve({ browser: true }), commonjs(), babel(), uglify()],
   },
   {
-    input: './src/storage.js',
+    input: './src/localCookie.js',
     output: {
-      file: './module/storage.js',
+      file: './module/localCookie.js',
       format: 'esm',
       name: 'Storage',
     },

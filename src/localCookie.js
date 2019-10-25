@@ -1,7 +1,10 @@
 // LocalStorage and Cookie storage library
-class Storage {
-	constructor() {
-		if (this._checkIfLocalStorageWorks() === true)
+class localCookie {
+	constructor(options) {
+		options = options || {}
+		this.forceCookies = options.forceCookies || false
+
+		if (this._checkIfLocalStorageWorks() === true && options.forceCookies !== true)
 			return {
 				getItem : this._getItemLocalStorage,
 				setItem : this._setItemLocalStorage,
@@ -96,4 +99,4 @@ class Storage {
 	}
 }
 
-export default Storage
+export default localCookie

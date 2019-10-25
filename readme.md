@@ -21,9 +21,9 @@ yarn add github:WebPlatformForEmbedded/localCookies
 Next you can `import` the localCookies dependency into your own script and start implementing it from there.
 
 ```js
-import Storage from './module/Storage.js',
+import Storage from './module/localCookie.js',
 // or
-const Storage = require('./module/Storage.js')
+const Storage = require('./module/localCookie.js')
 ```
 
 ## Build
