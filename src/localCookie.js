@@ -9,14 +9,16 @@ class localCookie {
 				getItem : this._getItemLocalStorage,
 				setItem : this._setItemLocalStorage,
 				removeItem : this._removeItemLocalStorage,
-				clear : this._clearLocalStorage
+				clear : this._clearLocalStorage,
+				keys : this._getLocalStorageKeys,
 			}
 		else
 			return {
 				getItem : this._getItemCookie,
 				setItem : this._setItemCookie,
 				removeItem : this._removeItemCookie,
-				clear : this._clearCookies
+				clear : this._clearCookies,
+				keys : this._getCookieKeys,
 			}
 	}
 
@@ -62,6 +64,10 @@ class localCookie {
 	 	return window.localStorage.clear()
 	 }
 
+	 _getLocalStorageKeys() {
+		return Object.keys(window.localStorage)
+	 }
+
 	 /*
 	  * Cookie APIs
 	  */
@@ -96,6 +102,13 @@ class localCookie {
 		});
 
 		return //return undefined
+	}
+
+	_getCookieKeys() {
+		return document.cookie.split(';').map(cookie => {
+			const parts = cookie.split('=')
+			return parts[1] !== '' ? parts[0].trim() : false
+		}).filter(key => key)
 	}
 }
 

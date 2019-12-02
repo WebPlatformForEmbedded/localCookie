@@ -20,6 +20,10 @@ describe('local Storage', () => {
 		expect(ls.clear).to.be.a('function')
 	})
 
+	it('should have a keys function', () => {
+		expect(ls.keys).to.be.a('function')
+	})
+
 	it('should accept a key/value "a" with value "b"', () => {
 		let _r = ls.setItem('a','b')
 		expect( _r ).to.be.a('undefined')
@@ -60,10 +64,19 @@ describe('local Storage', () => {
 	it('should not have a value for key "b"', () => {
 		expect( ls.getItem('b') ).to.be.a('null')
 	})
+
+	it('should return and array of "keys"', () => {
+		ls.setItem('foo', 'bar')
+		ls.setItem('hey', 'hello')
+		expect( ls.keys() ).to.be.an('array')
+		expect( ls.keys() ).to.eql(['foo', 'hey'])
+	})
+
 })
 
 describe('Cookies ', () => {
 	let cs = new Storage({ forceCookies : true })
+	cs.keys()
 	it('should return an object', () => {
 		expect(cs).to.be.a('object')
 	})
@@ -78,6 +91,10 @@ describe('Cookies ', () => {
 
 	it('should have a clear function', () => {
 		expect(cs.clear).to.be.a('function')
+	})
+
+	it('should have a keys function', () => {
+		expect(cs.keys).to.be.a('function')
 	})
 
 	it('should accept a key/value "a" with value "b"', () => {
@@ -119,6 +136,13 @@ describe('Cookies ', () => {
 
 	it('should not have a value for key "b"', () => {
 		expect( cs.getItem('b') ).to.be.a('null')
+	})
+
+	it('should return and array of "keys"', () => {
+		cs.setItem('foo', 'bar')
+		cs.setItem('hey', 'hello')
+		expect( cs.keys() ).to.be.an('array')
+		expect( cs.keys() ).to.eql(['foo', 'hey'])
 	})
 })
 
