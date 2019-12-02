@@ -1,9 +1,11 @@
 {
   "author": "Wouter van Boesschoten <wouter@wouterlucas.com>",
-  "name": "localCookies",
-  "version": "0.0.1",
+  "name": "localCookie",
+  "version": "1.1.0",
   "license": "apache",
-  "main": "index.js",
+  "main": "src/localCookie.js",
+  "module": "module/localCookie.js",
+  "browser": "dist/localCookie.js",
   "scripts": {
     "build": "rollup -c rollup.config.js",
     "watch": "rollup -c rollup.config.js --watch",
