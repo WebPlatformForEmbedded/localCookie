@@ -13,9 +13,9 @@ localCookies comes in two flavors a iife function that can be directly used in t
 localCookies can be directly imported from the `dist` or `module` folder. For development:
 
 ```Shell
-npm install github:WebPlatformForEmbedded/localCookies
+npm install github:WebPlatformForEmbedded/localCookie
 // or
-yarn add github:WebPlatformForEmbedded/localCookies
+yarn add github:WebPlatformForEmbedded/localCookie
 ```
 
 Next you can `import` the localCookies dependency into your own script and start implementing it from there.
