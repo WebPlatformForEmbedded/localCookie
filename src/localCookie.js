@@ -79,7 +79,7 @@ class localCookie {
 	_setItemCookie(key, value) {
 		var now = new Date()
 		var expires = new Date(now.getTime() +1000*60*60*24*365*5) // 5 years!
-		document.cookie = `${key}=${value}; expires=${expires.toGMTString()};`
+		document.cookie = `${key}=${value}; expires=${expires.toUTCString()};`
 		return //return undefined just like localStorage
 	}
 
