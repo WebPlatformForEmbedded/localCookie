@@ -106,12 +106,7 @@ class localCookie {
 		return //return undefined
 	}
 	_getCookieKeys() {
-		let keys = []
-		document.cookie.split(";").forEach((item)=>{
-			let key = item.split("=")[0]
-			keys.push(key)
-		})
-		return keys
+		return document.cookie.split(";").map((item)=>item.split("=")[0])
 	}
 }
 
