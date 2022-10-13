@@ -1,7 +1,7 @@
 {
   "author": "Wouter van Boesschoten <wouter@wouterlucas.com>",
-  "name": "localCookie",
-  "version": "1.2.0",
+  "name": "localcookies",
+  "version": "2.0.0",
   "license": "apache",
   "main": "src/localCookie.js",
   "module": "module/localCookie.js",
